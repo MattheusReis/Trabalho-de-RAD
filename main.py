@@ -5,17 +5,17 @@ app = Flask(__name__)
 livros = [
     {
         'id': 1,
-        'título': 'Código Limpo: Habilidades Práticas do Agile Software.',
+        'titulo': 'Codigo Limpo: Habilidades Praticas do Agile Software.',
         'autor': 'Robert C. Martin'
     },
     {
         'id': 2,
-        'título': 'Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos.',
+        'titulo': 'Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos.',
         'autor': 'Aditya Y. Bhargava'
     },
     {
         'id': 3,
-        'título': 'A Sutil Arte de Ligar o F*da-Se: Uma estratégia inusitada para uma vida melhor',
+        'titulo': 'A Sutil Arte de Ligar o F*da-Se: Uma estrategia inusitada para uma vida melhor',
         'autor': 'Mark Manson'
     },
 ]
