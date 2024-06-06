@@ -1,33 +1,8 @@
-from flask import Flask, jsonify, request
+from settings.flask_aap import create_app
 
-app = Flask(__name__)
+app = create_app()
 
-livros = [
-    {
-        'id': 1,
-        'titulo': 'Codigo Limpo: Habilidades Praticas do Agile Software.',
-        'autor': 'Robert C. Martin'
-    },
-    {
-        'id': 2,
-        'titulo': 'Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos.',
-        'autor': 'Aditya Y. Bhargava'
-    },
-    {
-        'id': 3,
-        'titulo': 'A Sutil Arte de Ligar o F*da-Se: Uma estrategia inusitada para uma vida melhor',
-        'autor': 'Mark Manson'
-    },
-]
 
-# Consultar(todos)
-@app.route('/livros',methods=['GET'])
-def obter_livros():
-    return jsonify(livros)
-
-# Consultar(id)
-@app.route('/livros/<int:id>',methods=['GET'])
-def obter_livro_por_id(id):
-    for livro in livros:
-        if livro.get('id') == id:
-            return jsonify(livro)
+if __name__ == '__main__':
+    app.run(port=5050, debug=True)
+    
